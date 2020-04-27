@@ -1,24 +1,14 @@
-function propTypeSnippet() {
-  return `import React, { FunctionComponent } from 'react';
-  import styles from './styles/MyComponent.scss';
+const indexTemplate = require("./templates/indexTemplate");
+const indexTemplateSpec = require("./templates/indexTemplateSpec");
+const counterTemplate = require("./templates/indexTemplate");
+const counterTemplateSpec = require("./templates/indexTemplateSpec");
+const getDemoHTML = require("./templates/demoHTMLTemplate");
+const demoJSTemplate = require("./templates/demoJSTemplate");
+const getReadme = require("./templates/readmeTemplate");
+const webpackCommonTemplate = require("./templates/webpackCommonTemplate");
+const getWebpackDev = require("./templates/webpackDevTemplate");
+const webpackProdTemplate = require("./templates/webpackProdTemplate");
 
-  type MyComponentProps = {
-      onClick: () => void;
-      someProp: string;
-  };
-
-  const MyComponent: FunctionComponent<MyComponentProps> = props => {
-      const { onClick, someProp } = props;
-      return (
-          <div onClick={onClick} className={styles.someWrapper}>
-              Showing prop: {someProp}
-          </div>
-      );
-  };
-
-  export default MyComponent;
-`;
-}
 module.exports = {
   babelrc: `{
     "presets": ["@babel/preset-env"]
@@ -50,7 +40,20 @@ module.exports = {
     yarn-error.log
     coverage/
   `,
-
+  readme: ({ packageName, description }) =>
+    getReadme({
+      packageName,
+      description,
+    }),
+  webpackCommonTemplate,
+  webpackDevTemplate: ({ packageName }) => getWebpackDev({ packageName }),
+  webpackProdTemplate,
+  indexTemplate,
+  indexTemplateSpec,
+  counterTemplate,
+  counterTemplateSpec,
+  demoHTMLTemplate: ({ packageName }) => getDemoHTML({ packageName }),
+  demoJSTemplate,
   packageJsonObject: ({
     packageName,
     name,

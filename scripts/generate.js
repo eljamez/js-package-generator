@@ -8,6 +8,7 @@ async function displayPrompts() {
   const config = {
     name: "bob",
     packageName: "js-pkg",
+    description: "a package built with js-package-generator",
   };
 
   console.clear();
@@ -42,12 +43,13 @@ async function displayPrompts() {
     ${chalk.white("")}`)
     )) || config.packageName;
 
-  config.description = await prompt(
-    chalk.green(`
+  config.description =
+    (await prompt(
+      chalk.green(`
     Describe ${chalk.magenta(config.packageName)} in one sentence.
     
     ${chalk.white("")}`)
-  );
+    )) || config.description;
 
   config.repo = await prompt(
     chalk.green(`
@@ -99,11 +101,11 @@ async function displayPrompts() {
 
       Next steps include...
 
-      1) running \`cd ${config.packageName}\` 
-      2) running \`yarn install\` and \`yarn start\`
+      1) \`cd ${config.packageName}\` 
+      2) \`yarn install\` and \`yarn start\`
       3) reviewing your README.md, package.json
       4) editing the code to your specifications
-      5) running \`yarn build\`
+      5) \`yarn build\`
       6) publishing to NPM
 
       ENJOY!

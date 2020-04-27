@@ -5,10 +5,9 @@
   "main": "lib/index.min.js",
   "scripts": {
     "js-package-generator": "node scripts/generate.js",
-    "generate": "yarn src:rm && node scripts/generate.js",
-    "remote:rm": "git remote rm",
+    "generate": "yarn js-pkg:rm && node scripts/generate.js",
     "nodeModules:rm": "rm -rf node_modules/",
-    "src:rm": "rm -rf src/"
+    "js-pkg:rm": "rm -rf js-pkg/"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",

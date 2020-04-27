@@ -40,10 +40,10 @@ async function generateFile({
 
 function generatePackage(config) {
   const directoryPath = path.resolve(`${config.packageName}`);
-  const srcPath = path.resolve(directoryPath, "src");
   fs.mkdirSync(directoryPath);
-  fs.mkdirSync(srcPath);
-  fs.mkdirSync(path.resolve(srcPath, "modules"));
+  fs.mkdirSync(path.resolve(directoryPath, "src"));
+  fs.mkdirSync(path.resolve(directoryPath, "src/modules"));
+  fs.mkdirSync(path.resolve(directoryPath, "demo"));
 
   generateFile({
     config,
@@ -77,6 +77,78 @@ function generatePackage(config) {
     filePath: "package.json",
     template: "packageJsonObject",
     parser: "json",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "webpack.common.js",
+    template: "webpackCommonTemplate",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "webpack.dev.js",
+    template: "webpackDevTemplate",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "webpack.prod.js",
+    template: "webpackProdTemplate",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "README.md",
+    template: "readme",
+    parser: "none",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "src/index.js",
+    template: "indexTemplate",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "src/index.spec.js",
+    template: "indexTemplateSpec",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "src/modules/counter.js",
+    template: "counterTemplate",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "src/modules/counter.spec.js",
+    template: "counterTemplateSpec",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "demo/index.html",
+    template: "demoHTMLTemplate",
+    parser: "none",
+  });
+
+  generateFile({
+    config,
+    directoryPath,
+    filePath: "demo/index.js",
+    template: "demoJSTemplate",
   });
 
   return;

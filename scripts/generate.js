@@ -9,9 +9,9 @@ async function displayPrompts() {
     name: "bob",
     packageName: "js-pkg",
     description: "a package built with js-package-generator",
-    useJest: true;
-    useESLint: true;
-    useHusky: true;
+    useJest: true,
+    useESLint: true,
+    useHusky: true,
   };
 
   console.clear();

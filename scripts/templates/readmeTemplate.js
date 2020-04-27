@@ -1,5 +1,4 @@
 const getReadme = ({ packageName, description }) => {
-  console.log(packageName, description);
   return `
 # ${packageName}
 

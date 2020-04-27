@@ -1,6 +1,6 @@
 {
   "name": "js-package-generator",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Generate a JS package that is framework agnostic with this easy-to-use command line tool",
   "main": "lib/index.min.js",
   "scripts": {

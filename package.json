@@ -1,0 +1,49 @@
+{
+  "name": "js-package-generator",
+  "version": "0.1.0",
+  "description": "Generate a JS package that is framework agnostic with this easy-to-use command line tool",
+  "main": "lib/index.min.js",
+  "scripts": {
+    "js-package-generator": "node scripts/generate.js",
+    "generate": "yarn src:rm && node scripts/generate.js",
+    "remote:rm": "git remote rm",
+    "nodeModules:rm": "rm -rf node_modules/",
+    "src:rm": "rm -rf src/"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.0",
+    "chalk": "^4.0.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^2.0.5",
+    "readline": "^1.3.0",
+    "regenerator-runtime": "^0.11.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.1.3",
+    "webpack-merge": "^4.1.2"
+  },
+  "author": "James Hall <eljamez@gmail.com> (http://jamescript.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eljamez/js-package-generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eljamez/js-package-generator"
+  },
+  "homepage": "https://www.jamescript.com/js-package-generator/",
+  "keywords": [
+    "CLI",
+    "JavaScript-library",
+    "JavaScript-package",
+    "JavaScript",
+    "generator"
+  ]
+}

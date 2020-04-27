@@ -5,7 +5,7 @@
   "main": "lib/index.min.js",
   "scripts": {
     "js-package-generator": "node scripts/generate.js",
-    "generate": "yarn js-pkg:rm && node scripts/generate.js",
+    "generate": "npm run js-pkg:rm && node scripts/generate.js",
     "nodeModules:rm": "rm -rf node_modules/",
     "js-pkg:rm": "rm -rf js-pkg/"
   },

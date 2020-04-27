@@ -9,6 +9,9 @@ async function displayPrompts() {
     name: "bob",
     packageName: "js-pkg",
     description: "a package built with js-package-generator",
+    useJest: true;
+    useESLint: true;
+    useHusky: true;
   };
 
   console.clear();
@@ -58,6 +61,7 @@ async function displayPrompts() {
     ${chalk.white("")}`)
   );
 
+  /*
   const useJestAnswer = await prompt(
     chalk.green(`
     Would you like to use ${chalk.magenta(`Jest`)} for unit testing?
@@ -84,7 +88,7 @@ async function displayPrompts() {
   );
 
   config.useHusky = truthyAnswer(useHuskyAnswer);
-
+*/
   console.clear();
 
   generatePackage(config);

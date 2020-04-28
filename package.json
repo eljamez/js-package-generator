@@ -1,9 +1,10 @@
 {
   "name": "js-package-generator",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Generate a JS package that is framework agnostic with this easy-to-use command line tool",
   "main": "scripts/generate.js",
   "scripts": {
+    "start": "yarn js-package-generator",
     "js-package-generator": "yarn install && yarn generate",
     "generate": "yarn js-pkg:rm && node scripts/generate.js",
     "nodeModules:rm": "rm -rf node_modules/",

@@ -92,11 +92,12 @@ async function displayPrompts() {
 
   config.useHusky = truthyAnswer(useHuskyAnswer);
 */
-  console.clear();
+  console.log(`
+  
+  
+  `);
 
   generatePackage(config);
-
-  console.clear();
 
   console.log(
     chalk.green(
@@ -115,7 +116,11 @@ async function displayPrompts() {
       3) reviewing your README.md, package.json
       4) editing the code to your specifications
       5) \`yarn build\`
-      6) publishing to NPM
+      6) publishing to NPM \`npm publish\`
+
+      ${chalk.italic.cyan(
+        `"Ya know, Yarn or NPM, both work fantastically" - Spiderman`
+      )}
 
       ENJOY!
 

@@ -1,10 +1,10 @@
 {
   "name": "js-package-generator",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "Generate a JS package that is framework agnostic with this easy-to-use command line tool",
   "main": "lib/index.min.js",
   "scripts": {
-    "js-package-generator": "node scripts/generate.js",
+    "js-package-generator": "npm i && node scripts/generate.js",
     "generate": "npm run js-pkg:rm && node scripts/generate.js",
     "nodeModules:rm": "rm -rf node_modules/",
     "js-pkg:rm": "rm -rf js-pkg/"

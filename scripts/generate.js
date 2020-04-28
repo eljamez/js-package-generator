@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const chalk = require("chalk");
 const { prompt } = require("./readline");
 const { generatePackage } = require("./generatePackage");

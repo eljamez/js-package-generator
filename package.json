@@ -1,11 +1,11 @@
 {
   "name": "js-package-generator",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Generate a JS package that is framework agnostic with this easy-to-use command line tool",
-  "main": "lib/index.min.js",
+  "main": "scripts/generate.js",
   "scripts": {
-    "js-package-generator": "npm i && node scripts/generate.js",
-    "generate": "npm run js-pkg:rm && node scripts/generate.js",
+    "js-package-generator": "yarn install && yarn generate",
+    "generate": "yarn js-pkg:rm && node scripts/generate.js",
     "nodeModules:rm": "rm -rf node_modules/",
     "js-pkg:rm": "rm -rf js-pkg/"
   },
@@ -14,7 +14,6 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.0",
     "chalk": "^4.0.0",
     "clean-webpack-plugin": "^0.1.19",

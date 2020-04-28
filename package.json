@@ -10,6 +10,9 @@
     "nodeModules:rm": "rm -rf node_modules/",
     "js-pkg:rm": "rm -rf js-pkg/"
   },
+  "bin": {
+    "js-package-generator": "./scripts/generate.js"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",

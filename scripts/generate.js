@@ -8,7 +8,7 @@ const truthyAnswer = (ans) => ans.toLowerCase().includes("y", "yes");
 
 async function displayPrompts() {
   const config = {
-    name: "bob",
+    name: "USER",
     packageName: "js-pkg",
     description: "a package built with js-package-generator",
     useJest: true,
@@ -63,7 +63,8 @@ async function displayPrompts() {
     ${chalk.white("")}`)
   );
 
-  /*
+  /*TODO add options.
+
   const useJestAnswer = await prompt(
     chalk.green(`
     Would you like to use ${chalk.magenta(`Jest`)} for unit testing?
@@ -94,6 +95,8 @@ async function displayPrompts() {
   console.clear();
 
   generatePackage(config);
+
+  console.clear();
 
   console.log(
     chalk.green(

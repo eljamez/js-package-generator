@@ -78,24 +78,24 @@ module.exports = {
       "@babel/preset-env": "^7",
       "babel-core": "^7.0.0-bridge.0",
       "babel-loader": "^8.0.0",
-      "clean-webpack-plugin": "^0.1.19",
-      "html-webpack-plugin": "^3.2.0",
+      "clean-webpack-plugin": "^3.0.0",
+      "html-webpack-plugin": "^4.2.1",
       prettier: "^2.0.5",
       "regenerator-runtime": "^0.11.1",
       "uglifyjs-webpack-plugin": "^1.2.5",
-      webpack: "^4.5.0",
+      webpack: "^4.43.0",
       "webpack-cli": "^3.3.11",
-      "webpack-dev-server": "^3.1.3",
-      "webpack-merge": "^4.1.2",
+      "webpack-dev-server": "^3.10.3",
+      "webpack-merge": "^4.2.2",
     };
 
     if (useJest) {
       scripts.test = "jest";
-      devDependencies.jest = "^25.4.0";
+      devDependencies.jest = "^25.5.0";
       if (useESLint) {
         devDependencies["eslint-plugin-jest"] = "^23.8.2";
       }
-      devDependencies["babel-jest"] = "^23.4.2";
+      devDependencies["babel-jest"] = "^25.5.0";
       jsonFields.jest = {
         verbose: true,
         testURL: "http://localhost/",
@@ -105,13 +105,13 @@ module.exports = {
     if (useESLint) {
       scripts.lint = "eslint *.js src/*.js src/*/*.js ";
       devDependencies.eslint = "^6.8.0";
-      devDependencies["eslint-config-standard"] = "^11.0.0";
+      devDependencies["eslint-config-standard"] = "^14.1.1";
       devDependencies["eslint-loader"] = "^4.0.2";
-      devDependencies["eslint-plugin-import"] = "^2.11.0";
+      devDependencies["eslint-plugin-import"] = "^2.20.2";
       devDependencies["eslint-plugin-jest"] = "^23.8.2";
-      devDependencies["eslint-plugin-node"] = "^6.0.1";
-      devDependencies["eslint-plugin-promise"] = "^3.7.0";
-      devDependencies["eslint-plugin-standard"] = "^3.1.0";
+      devDependencies["eslint-plugin-node"] = "^11.1.0";
+      devDependencies["eslint-plugin-promise"] = "^4.2.1";
+      devDependencies["eslint-plugin-standard"] = "^4.0.1";
     }
 
     if (useHusky) {

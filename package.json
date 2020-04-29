@@ -1,6 +1,6 @@
 {
   "name": "js-package-generator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Generate a (vanilla) JS package with this easy-to-use command line tool",
   "main": "scripts/generate.js",
   "scripts": {

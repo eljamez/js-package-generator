@@ -41,12 +41,16 @@ async function displayPrompts() {
     )) || config.name;
 
   config.packageName =
-    (await prompt(
-      chalk.green(`
+    (
+      await prompt(
+        chalk.green(`
     What is the name of your package / library?
     
     ${chalk.white("")}`)
-    )) || config.packageName;
+      )
+    )
+      .replace(/\s+/g, "-")
+      .toLowerCase() || config.packageName;
 
   config.description =
     (await prompt(

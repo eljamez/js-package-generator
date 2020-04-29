@@ -19,8 +19,8 @@ const getDemoHTML = ({ packageName }) => {
         <section class="section">
           <div class="columns">
             <div class="column is-one-third">
-              <h2 class="title">Create your library.</h2>
-              <h3 class="subtitle">Tried to keep it simple.</h3>
+              <h2 class="title">Create your package.</h2>
+              <h3 class="subtitle">And have fun.</h3>
               <ul class="list">
                 <li class="list-item"><a href="https://babeljs.io/">Babel</a></li>
                 <li class="list-item">

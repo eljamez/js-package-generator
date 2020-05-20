@@ -1,8 +1,8 @@
-# js-package-generator 🏗
+![js-package-generator](js-package-generator.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Generate a (vanilla) JS package with this easy-to-use command line tool
+🏗 Generate a (vanilla) JS package with this easy-to-use command line tool
 
 ---
 
